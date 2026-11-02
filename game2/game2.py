@@ -23,4 +23,5 @@ while True:
  if guess in word:
   print(f"Good guess! {guess} is in the word.")
  else:
+  lives = lives - 1
   print(f"Sorry, {guess} is not in the word. You lose a life. {lives} lives left.")
