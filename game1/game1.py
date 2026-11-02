@@ -10,14 +10,14 @@ while player_score < 3 and computer_score < 3:
  computer = random.choice(choices)
  print(f"You: {player} | Computer: {computer}")
  if player == computer:
-  print("Draw!")
+  print(f"Draw! Player {player_score}-Computer {computer_score}")
  elif computer in beats[player]:
-  print("You win this round!")
+  print(f"You win this round! Player {player_score}-Computer {computer_score}")
   player_score += 1
  else:
-  print("You lose this round!")
+  print(f"You lose this round! Player {player_score}-Computer {computer_score}")
   computer_score += 1
 if player_score == 3:
- print("Congratulations! You won the game!")
+ print(f"Congratulations! You won the game! Player score: {player_score} | Computer score: {computer_score}")
 elif computer_score == 3:
- print("Sorry! The computer won the game!")
+ print(f"Sorry! The computer won the game! Player score: {player_score} | Computer score: {computer_score}")
