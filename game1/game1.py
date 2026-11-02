@@ -1,13 +1,19 @@
 import random
 choices = ["rock", "paper", "scissors"]
-player = input("rock, paper or scissors? ") # NEW
-computer = random.choice(choices)
-print(f"You chose: {player}") # NEW
-print(f"The computer chose: {computer}")
-print(f"You: {player} | Computer: {computer}")
-if player == computer: # NEW
- print("Draw!") # NEW
-elif beats[player] == computer: # NEW
- print("You win!") # NEW
-else: # NEW
- print("You lose!") # NEW
+beats = {"rock": "scissors", "paper": "rock", "scissors": "paper"}
+player_score = 0
+computer_score = 0
+while player_score < 3 and computer_score < 3:
+ player = input("rock, paper or scissors? ").lower().strip() 
+ while player not in choices: 
+    player = input("Please type rock, paper or scissors: ").lower().strip() 
+ computer = random.choice(choices)
+ print(f"You: {player} | Computer: {computer}")
+ if player == computer:
+  print("Draw!")
+ elif beats[player] == computer:
+  print("You win!")
+  player_score += 1
+ else:
+  print("You lose!")
+  computer_score += 1
