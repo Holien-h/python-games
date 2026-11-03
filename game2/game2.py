@@ -26,7 +26,7 @@ while True:
  if len(guess) != 1 or not guess.isalpha():
   print("Please enter a single letter.")
   continue
- if guess in guessed: ` `
+ if guess in guessed:
   print("You already guessed that letter.")
   continue
  guessed.append(guess)
